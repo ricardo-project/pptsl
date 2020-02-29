@@ -1,0 +1,116 @@
+body {
+    background-color:slateblue;
+} .imagem {
+    height: 200px;
+    width: cover;
+    cursor: pointer;
+    transform: scale(1);
+    margin-left: 0px;
+    margin-right: 0px;
+    transition: all 0.5s ease;
+} .imagem:hover {
+    transform: scale(1.2);
+    margin-left: 20px;
+    margin-right: 20px;
+} .secao {
+    text-align: center;
+    width: 70%;
+    margin-left: 14.5%;
+    padding: 40px;
+    border-radius: 120px;
+    border: 15px solid saddlebrown;
+    box-shadow: black 6px 6px 5px;
+} .point {
+    font-family: Girassol;
+    font-size: 40px;
+    text-indent: 40px;
+    margin-top: -40px;
+    text-align: justify;
+    text-shadow: black 4px 3px 3px;
+    cursor: pointer;
+} .campo {
+    font-size: 30px;
+    width: 200px;
+    border: 5px solid saddlebrown;
+    box-shadow: black 4px 4px 3px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    text-shadow: black 3px 3px 3px;
+    padding-left: 7px;
+} #title {
+    font-family: Bebas Neue;
+    font-size: 100px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color:silver;
+    text-align: center;
+    text-shadow: black 4px 4px 3px;
+    background-color:midnightblue;
+    box-shadow: black 0px 6px 5px;
+} #imagem1 {
+    margin-left: 20px;
+    height: 480px;
+    border: 10px solid sienna;
+    border-radius: 100px;
+    box-shadow: black 5px 5px 4px;
+    cursor: pointer;
+} .botao {
+    font-family: Raleway;
+    font-size: 40px;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    transition: all 0.2s ease;
+    border: 5px solid;
+    border-radius: 15px;
+    cursor: pointer;
+    position: absolute;
+} .imgfinal {
+    height: 200px;
+    width: cover;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    filter: contrast(1);
+} .imgfinal:hover {
+    height: 220px;
+    filter: contrast(1.5);
+} #botao1 {
+    margin-top: 35px;
+    box-shadow: black 5px 5px 4px;
+    border-color:olive;
+    background-color: teal;
+} #botao2 {
+    text-shadow: black 4px 4px 3px;
+    border-color:olivedrab;
+    background-color:seagreen;
+} #botao2:hover {
+    background-color: yellowgreen;
+} #botao2:active {
+    margin-top: 20px;
+} #loading {
+    display: none;
+    position: absolute;
+    width: 8%;
+    margin-top: -47%;
+    margin-left: 21%;
+    padding-left: 28%;
+    padding-right: 28%;
+    padding-top: 16%;
+    padding-bottom: 26%;
+} #imgwthree {
+    background-color: white;
+    border-radius: 100px;
+} #imgwthree:hover {
+    border-radius: 110px;
+} #conteudo {
+    background-color: royalblue;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -10px;
+    padding-bottom: 100px;
+    border-bottom: 20px solid brown;
+    box-shadow: 0px 6px 5px;
+}

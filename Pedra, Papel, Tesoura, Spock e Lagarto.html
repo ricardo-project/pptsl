@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pedra, Papel, Tesoura, Spock e Lagarto</title>
+        <meta charset=UTF-8>
+        <link rel="shortcut icon" type="image/x-icon" href="http://uauoregon.org/wp-content/uploads/2017/01/fist-icon-black-e1485638636425.png">
+        <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Girassol" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="Pedra, Papel, Tesoura, Spock e Lagarto (CSS).css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <article id=conteudo>
+            <p id=title><img src="https://cdn.pixabay.com/photo/2016/10/30/23/05/controller-1784573_640.png" style="height: 100px; width: cover; border-radius: 50px; box-shadow: black 4px 4px 3px"> Pedra, Papel, Tesoura, Spock e Lagarto</p>
+            <p style="text-align: center"><img src="http://i.imgur.com/p9MPH.png" style="cursor: pointer"><img src="https://i.pinimg.com/originals/e9/e2/28/e9e228ef4a2fff6a45aec5d2c4dc1ff3.jpg" id=imagem1></p>
+            <section style="background-color: orangered; margin-bottom: 15px" id=secao1 class=secao>
+                <p class=point style="color: orange">Pontuação do jogador: <input type=text id=inp1 class=campo style="background-color: orange" value=0 disabled></p>
+                <!--Imagens-->
+            </section>
+            <section style="margin-left: 41.75%"><input type=button id=botao1 class=botao value="Reiniciar Partida"><br><input type=button id=botao2 class=botao value="Reiniciar Partida"  onclick="reiniciar()"></section>
+            <section style="background-color: purple; position: relative; margin-top: 120px" id=secao2 class=secao>
+                <p class=point style="color: orchid">Pontuação do computador: <input type=text id=inp2 class=campo style="background-color: orchid" value=0 disabled></p>
+                <!--Imagens-->
+            </section>
+            <img src="https://www.guaruja.sp.gov.br/wp-content/uploads/2019/04/loading.fef1f20.gif" id=loading>
+            <audio src="Efeitos Sonoros/WaterDrop.mp3" id=audio1></audio>
+            <audio src="Efeitos Sonoros/Apple Pay.mp3" id=audio2></audio>
+            <audio src="Efeitos Sonoros/Erro Windows.mp3" id=audio3></audio>
+            <audio src="Efeitos Sonoros/Huawei 02.mp3" id=audio4></audio>
+            <audio src="Efeitos Sonoros/Huawei 03.mp3" id=audio5></audio>
+            <audio src="Efeitos Sonoros/Sharp hit, phazed.mp3" id=audio6></audio>
+        </article>
+        <article style="text-align: center; padding-bottom: 40px">
+            <p style="font-family: Raleway; font-size: 30px; text-align: justify; color: white; text-shadow: black 3px 3px 3px; margin-bottom: 20px"><img src="https://web.whatsapp.com/pp?e=https%3A%2F%2Fpps.whatsapp.net%2Fv%2Ft61.24694-24%2F72488554_149290383035295_296111813634711601_n.jpg%3Foe%3D5DF838AE%26oh%3D84cee26ecc9e3ed3dd5378d294962c6e&t=l&u=555481146851%40c.us&i=1576163446" style="width: 30px; height: cover; border-radius: 15px; box-shadow: black 3px 3px 3px"> Ricardo Augusto Müller Germani - Copyright 2019</p>
+            <a href="http://passofundo.ifsul.edu.br/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Instituto_Federal_Sul-rio-grandense_-_Marca_Vertical_2015.svg/1200px-Instituto_Federal_Sul-rio-grandense_-_Marca_Vertical_2015.svg.png" class=imgfinal onclick="audio2.play()"></a> <!--Instituto Federal Sul-Rio-Grandense-->
+            <a href="https://html.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" class=imgfinal onclick="audio2.play()"></a> <!--HTML 5-->
+            <a href="https://www.javascript.com/"><img src="http://luizricardo.org/wordpress/wp-content/upload-files/2014/11/js-logo-badge-512.png" class=imgfinal onclick="audio2.play()"></a> <!--JavaScript-->
+            <a href="https://www.w3schools.com/css/"><img src="https://logodownload.org/wp-content/uploads/2017/04/css-3-logo-1.png" class=imgfinal onclick="audio2.play()"></a> <!--CSS 3-->
+            <a href="https://www.w3schools.com/"><img src="https://i0.wp.com/amai-lab.com/wp-content/uploads/2017/12/W3Schools_logo1.png?fit=500%2C200&ssl=1" class=imgfinal id=imgwthree onclick="audio2.play()"></a> <!--W3Schools-->
+        </article>
+    </body>
+    <script>
+        var cond = false;
+        var condround = false;
+        var link = new Array();
+            link[0] = "https://myrealdomain.com/images/pedra-png.png"; //---> Pedra
+            link[1] = "https://images.vexels.com/media/users/3/154699/isolated/preview/c93db465dcc07a3343537bf142adece5---cone-de-contato-de-papel-e-l--pis-by-vexels.png"; //---> Papel
+            link[2] = "https://img.icons8.com/color/452/barber-scissors.png"; //---> Tesoura
+            link[3] = "https://officialpsds.com/imageview/7x/w5/7xw55r_large.png?1521316456"; //---> Spock
+            link[4] = "https://image.flaticon.com/icons/png/512/616/616488.png"; //---> Lagarto
+        for(var w = 1; w <= 2; w++) {
+            var complem;
+            for(var r = 0; r < link.length; r++) {
+                if(w == 1) {
+                    complem = "onclick='jogo(" + r + ")' style='filter: contrast(1.5)'>";
+                } else if(w == 2) {
+                    complem = "style='filter: grayscale(1) contrast(0.75)' onclick='mostrarAlert()'>";
+                } document.getElementById("secao" + w).innerHTML += "<img id=p" + w + "i" + r + " src='" + link[r] + "' class=imagem " + complem;
+            }
+        } var element = new Array(" Pedra", " Papel", " Tesoura", " Spock", " Lagarto"); //A, O, A, O, O
+        var action = new Array();
+            action[0] = new Array(" é embrulhada pela", " destrói a", " é vaporizada pelo", " esmaga o"); //---> Pedra
+            action[1] = new Array(" embrulha o", " é cortado pela", " desqualifica o", " é comido pela"); //---> Papel
+            action[2] = new Array(" é destruída pela", " corta o", " é quebrada pelo", " decapita o"); //---> Tesoura
+            action[3] = new Array(" vaporiza a", " é desqualificado pelo", " quebra a", " é envenenado pelo"); //---> Spock
+            action[4] = new Array(" é esmagado pelo", " come o", " é decapitado pela", " envenena o"); //---> Lagarto
+        var artic = new Array(" A", " O");
+        function jogo(valor) {
+            var num = Math.floor(Math.random()*element.length);
+            var time = 500 + Math.floor(500*Math.random());
+            loading.style.display = "block";
+            setTimeout(function() {
+                loading.style.display = "none";
+                if(num == valor) {
+                    alert("Empate!");
+                    audio1.play();
+                } else if(num !== valor) {
+                    var mostrar = " - Escolhido pelo jogador:" + element[valor] + "\n - Escolhido pelo computador:" + element[num] + "\n\n";
+                    if(condround == false) {
+                        condround = true;
+                    } var cons = 1;
+                    if(num > valor) {
+                        cons++;
+                    } if((num - valor + cons) % 2 == 0) {
+                        alert(mostrar + "Você venceu!" + artic[(valor % 2) + Math.floor(valor/4)] + element[valor] + action[valor][num - cons + 1] + element[num] + "!");
+                        audio5.play();
+                    } else if((num - valor + cons) % 2 == 1) {
+                        alert(mostrar + "O computador ganhou um ponto!" + artic[(valor % 2) + Math.floor(valor/4)] + element[valor] + action[valor][num - cons + 1] + element[num] + "!");
+                        audio6.play();
+                    } document.getElementById("inp" + (1 + (num - valor + cons) % 2)).value = parseFloat(document.getElementById("inp" + (1 + (num - valor + cons) % 2)).value) + 1;
+                } for(var y = 0; y < element.length; y++) {
+                    if(y == valor) {
+                        document.getElementById("p1i" + y).style.filter = "grayscale(0) contrast(1.5)";
+                    } else if(y !== valor) {
+                        document.getElementById("p1i" + y).style.filter = "grayscale(1) contrast(0.75)";
+                    } if(y == num) {
+                        document.getElementById("p2i" + y).style.filter = "grayscale(0) contrast(1.5)";
+                    } else if(y !== num) {
+                        document.getElementById("p2i" + y).style.filter = "grayscale(1) contrast(0.75)";
+                    }
+                }
+            }, time);
+        } function mostrarAlert() {
+            if(cond == false) {
+                var mensagem = confirm("Estes elementos indicam somente a escolha que o computador executou aleatoriamente. Para iniciar uma nova rodada, clique em alguma das figuras presentes acima!\n\nDeseja mostrar novamente esta mensagem?\n - Se sim, clique em OK!\n - Caso não queira, clique em Cancelar!");
+                if(mensagem == false) { //---> Quando clicar em OK
+                    cond = true;
+                } audio4.play();
+            } else if(cond == true) {
+                audio3.volume = 0.7;
+                audio3.play();
+            }
+        } function reiniciar() {
+            if(condround == true) {
+                var confirmar = confirm("Deseja visualizar a situação da partida até aqui?\n\n - Se sim, clique em OK!\n - Caso não queira, clique em Cancelar!");
+                var num = new Array();
+                for(var k = 1; k <= 2; k++) {
+                    num[k - 1] = parseFloat(document.getElementById("inp" + k).value);
+                } //---> num[0]: Pontos do jogador; num[1]: Pontos do computador
+                var points = "\n\n - Jogador: " + num[0] + "\n - Computador: " + num[1];
+                if(confirmar == true) {
+                    if(num[0] == num[1]) {
+                        alert("Jogo terminou empatado! Ambos fizeram a mesma pontuação!" + points);
+                        audio1.play();
+                    } else if(num[0] < num[1]) {
+                        alert("Poxa vida, jogador: você perdeu esta partida! O computador fez mais pontos que você... =/ ... Boa sorte na próxima jogada!" + points);
+                        audio6.play();
+                    } else if(num[0] > num[1]) {
+                        alert("Parabéns, campeão! Você efetuou mais pontos que o computador! Confira abaixo a pontuação:" + points);
+                        audio5.play();
+                    }
+                } else if(confirmar == false) {
+                    audio2.play();
+                } for(var k = 1; k <= 2; k++) {
+                    document.getElementById("inp" + k).value = "0";
+                } for(var l = 0; l < element.length; l++) {
+                    document.getElementById("p1i" + l).style.filter = "grayscale(0) contrast(1.5)";
+                    document.getElementById("p2i" + l).style.filter = "grayscale(1) contrast(0.75)";
+                }
+            } else if(condround == false) {
+                alert("Você não inicializou a sua partida... Favor, clicar neste botão somente quando um dos jogadores já estiver pontuado!");
+                audio6.play();
+            } condround = false;
+        }
+    </script>
+</html>
