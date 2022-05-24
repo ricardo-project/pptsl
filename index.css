@@ -1,6 +1,6 @@
 body {
     background-color:slateblue;
-    overflow: hidden;
+    overflow-x: hidden;
 } .imagem {
     height: 200px;
     width: cover;
