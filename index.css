@@ -92,14 +92,10 @@ body {
     margin-top: 20px;
 } #loading {
     display: none;
-    position: absolute;
+    position: flex;
     width: 8%;
-    margin-top: -47%;
-    margin-left: 21%;
-    padding-left: 28%;
-    padding-right: 28%;
-    padding-top: 16%;
-    padding-bottom: 26%;
+    left: 46%;
+    top: 46%;
 } #imgwthree {
     background-color: white;
     border-radius: 100px;
