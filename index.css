@@ -1,5 +1,6 @@
 body {
     background-color:slateblue;
+    overflow: hidden;
 } .imagem {
     height: 200px;
     width: cover;
@@ -92,7 +93,9 @@ body {
     margin-top: 20px;
 } #loading {
     display: none;
-    position: flex;
+    position: fixed;
+    filter: drop-shadow(rgb(0,0,0,0.5) 3px 3px 0px);
+    z-index: 2;
     width: 8%;
     left: 46%;
     top: 46%;
